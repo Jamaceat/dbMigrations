@@ -1,10 +1,15 @@
 # DtoB
 This is a multimigration project for automatization of db migrations according to the db desired to migrate
 
+### Flow diagram
 ```mermaid
+graph LR
+A[DB Engine 1] -- Build container with its respective database engine --> B(Generate Migration script for DB Engine 2)
+B --> D{Run container DB Engine 2 with Docker already migrated }
+
+```
+
+<!-- ```mermaid
 sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
+
+``` -->
